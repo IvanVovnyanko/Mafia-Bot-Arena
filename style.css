@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f0f1a;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.hero {
+    background-image: url('image/img1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover; /* ← добавить */
+    
+    text-align: center;
+}
+
+.btn {
+    padding: 15px 30px;
+    background: #ff0055;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #ff0055, 0 0 40px #ff0055;
+
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff0055, 0 0 60px #ff0055;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: #1e1e2f;
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s;
+
+    /* Сама магия свечения */
+    /* Смещение X, Y | Размытие | Растяжение | Цвет */
+    box-shadow: 0 0 10px #00ffd5, 0 0 40px #00ffd5;
+    
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff0055;
+}
+
+.hero-content  {
+    animation-name: slideIn;       /* Имя нашей анимации */
+    animation-duration: 1.5s;      /* Длительность */
+    animation-iteration-count: 1;  /* Сколько раз повторить (или infinite) */
+    animation-timing-function: ease-out; /* Плавность затухания */
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+@keyframes slideIn {
+    0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.2); }
+  }
+
+.video-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.promo-video {
+    width: 15%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00ffd5;
+    transition: 0.4s;
+}
+
+.promo-video:hover {
+    transform: scale(1.03);
+}
