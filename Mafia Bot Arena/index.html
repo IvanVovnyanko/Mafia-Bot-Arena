@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Mafia Bot Arena</title>
+    <link rel="stylesheet" href="style.css">
+
+  
+</head>
+<body>
+
+    <script>
+        const music = document.getElementById("bg-music");
+    
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+    </script>
+
+<header>
+    <h1>Mafia Bot Arena</h1>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Лучший бот для игры в мафию</h2>
+        <p>Автоигра. Стратегия. Победа.</p>
+        <button class="btn">Начать игру</button>
+    </div>
+</section>
+
+<section class="about">
+    <h2>Режимы игры</h2>
+    <div class="cards">
+        <div class="card">Арена</div>
+        <div class="card">Классика</div>
+        <div class="card">Дуэль</div>
+        <div class="card">Автовход</div>
+    </div>
+</section>
+
+<section class="video-section">
+    <h2>Демонстрация бота</h2>
+    <video class="promo-video" controls poster="image/previe.jpg">
+        <source src="video/bot1.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+    </video>
+</section>
+
+<section class="form-section">
+    <h2>Регистрация</h2>
+    <form>
+        <input type="text" placeholder="Nickname" required>
+        <input type="email" placeholder="Email" required>
+        <select>
+            <option>Арена</option>
+            <option>Классика</option>
+            <option>Дуэль</option>
+        </select>
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Mafia Bot Arena</p>
+</footer>
+
+<audio id="bg-music" loop>
+    <source src="audio/treck1.mp3" type="audio/mp3">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+</body>
+</html>
