@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Арена — Mafia Bot Arena</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1><a href="index.html" class="logo-link">Mafia Bot Arena</a></h1>
+</header>
+
+<section class="page-hero">
+    <div class="page-hero-content">
+        <h2>Арена</h2>
+        <p class="page-subtitle">Режим «каждый сам за себя»</p>
+    </div>
+</section>
+
+<section class="page-content">
+    <div class="info-block">
+        <h3>Как играть</h3>
+        <p>В режиме Арена вы сражаетесь против множества игроков одновременно. Бот автоматически анализирует действия противников и выстраивает оптимальную стратегию. Выживает сильнейший!</p>
+    </div>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">⚔️</div>
+            <h4>PvP бои</h4>
+            <p>До 20 игроков в одном матче</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <h4>Рейтинг</h4>
+            <p>Глобальная таблица лидеров</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🤖</div>
+            <h4>Умный бот</h4>
+            <p>Адаптивная стратегия в реальном времени</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💎</div>
+            <h4>Награды</h4>
+            <p>Уникальные призы за победы</p>
+        </div>
+    </div>
+
+    <div class="cta-block">
+        <a href="start.html" class="btn">Начать игру в Арене</a>
+        <a href="index.html" class="btn btn-secondary">Назад</a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Mafia Bot Arena</p>
+</footer>
+
+<audio id="bg-music" loop>
+    <source src="audio/treck1.mp3" type="audio/mp3">
+</audio>
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+<script>
+    const music = document.getElementById("bg-music");
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+        } else {
+            music.pause();
+        }
+    }
+</script>
+
+</body>
+</html>
